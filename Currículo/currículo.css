@@ -1,0 +1,19 @@
+.cabecalho {
+    display: flex;
+    
+}
+
+.cabecalho2 {
+    display: flex;
+    flex-direction: column;
+}
+.informacao{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.restante {
+    display: flex;
+    flex-direction: column;
+}
