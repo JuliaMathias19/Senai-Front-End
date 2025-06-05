@@ -13,7 +13,10 @@
     flex-direction: column;
 }
 
-.restante {
-    display: flex;
-    flex-direction: column;
+.objetivo{
+    height: 100px;
+}
+
+.formacao{
+    height: 350px;
 }
