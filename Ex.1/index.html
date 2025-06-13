@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios - Lista 01</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 1000px; 
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+        
+        .exercises-grid {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px; 
+        }
+        .exercise-section {
+            flex: 1 1 calc(50% - 20px); 
+            min-width: 300px; 
+            margin-bottom: 30px; 
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+            box-sizing: border-box; 
+        }
+        .exercise-section h2 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultadoSoma, #saudacao, #resultadoConversao, #resultadoAntecessorSucessor, #resultadoValorTerreno, #resultadoConsumoMedio, #resultadoMediaNotas, #resultadoConversaoTemperatura {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #resultadoSoma {
+            color: #28a745;
+        }
+        #saudacao {
+            color: #17a2b8;
+        }
+        #resultadoConversao {
+            color: #ffc107;
+        }
+        #resultadoAntecessorSucessor {
+            color: #6f42c1;
+        }
+        #resultadoValorTerreno {
+            color: #fd7e14;
+        }
+        #resultadoConsumoMedio {
+            color: #023bf8;
+        }
+        #resultadoMediaNotas {
+            color: #ff0505;
+        }
+        #resultadoConversaoTemperatura {
+            color: #f83da1; 
+        }
+        .error {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .exercise-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Exercícios - Lista 01</h1>
+
+        <div class="exercises-grid">
+            <div class="exercise-section">
+                <h2>Exercício 1: Soma de Dois Números</h2>
+                <p>Clique no botão para inserir dois números e ver a soma.</p>
+                <button onclick="exercicio1_somarNumeros()">Iniciar Exercício 1</button>
+                <p id="resultadoSoma"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 2: Saudação Personalizada</h2>
+                <p>Clique no botão para informar seu nome e sobrenome e receber uma saudação.</p>
+                <button onclick="exercicio2_obterNomeESaudar()">Iniciar Exercício 2</button>
+                <p id="saudacao"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 3: Conversor de Reais para Dólar</h2>
+                <p>Clique no botão para informar um valor em Reais (R$) e convertê-lo para Dólar (US$).</p>
+                <button onclick="exercicio3_converterReaisParaDolar()">Iniciar Exercício 3</button>
+                <p id="resultadoConversao"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 4: Antecessor e Sucessor</h2>
+                <p>Clique no botão para digitar um número e descobrir seu antecessor e sucessor.</p>
+                <button onclick="exercicio4_antecessorSucessor()">Iniciar Exercício 4</button>
+                <p id="resultadoAntecessorSucessor"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 5: Valor do Terreno</h2>
+                <p>Clique no botão para calcular o valor de um terreno.</p>
+                <button onclick="exercicio5_calcularValorTerreno()">Iniciar Exercício 5</button>
+                <p id="resultadoValorTerreno"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 6: Consumo Médio do Veículo</h2>
+                <p>Clique no botão para calcular o consumo médio do seu veículo em km/l.</p>
+                <button onclick="exercicio6_calcularConsumoMedio()">Iniciar Exercício 6</button>
+                <p id="resultadoConsumoMedio"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 7: Média Aritmética de Notas</h2>
+                <p>Clique no botão para inserir quatro notas e calcular a média.</p>
+                <button onclick="exercicio7_calcularMediaNotas()">Iniciar Exercício 7</button>
+                <p id="resultadoMediaNotas"></p>
+            </div>
+
+            <div class="exercise-section">
+                <h2>Exercício 8: Conversor de Temperatura</h2>
+                <p>Clique no botão para converter uma temperatura de Fahrenheit para Celsius.</p>
+                <button onclick="exercicio8_converterFahrenheitParaCelsius()">Iniciar Exercício 8</button>
+                <p id="resultadoConversaoTemperatura"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
