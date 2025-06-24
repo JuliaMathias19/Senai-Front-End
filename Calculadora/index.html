@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora da Juju</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffebee;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            width: 320px;
+            border: 2px solid #ffcdd2;
+        }
+
+        .display {
+            background-color: #f8bbd0;
+            color: #4a148c;
+            font-size: 2.8em;
+            padding: 25px;
+            text-align: right;
+            border-top-left-radius: 23px;
+            border-top-right-radius: 23px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            background-color: #fce4ec;
+            padding: 15px;
+        }
+
+        .button {
+            background-color: #e1bee7;
+            color: #4a148c;
+            border: none;
+            padding: 22px;
+            font-size: 1.8em;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #ce93d8;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button.operator {
+            background-color: #ffccbc;
+            color: #d84315;
+        }
+
+        .button.operator:hover {
+            background-color: #ffab91;
+        }
+
+        .button.equals {
+            background-color: #c8e6c9;
+            color: #2e7d32;
+        }
+
+        .button.equals:hover {
+            background-color: #a5d6a7;
+        }
+
+        .button.clear {
+            background-color: #ffcdd2;
+            color: #c62828;
+        }
+
+        .button.clear:hover {
+            background-color: #ef9a9a;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button operator" onclick="appendToDisplay('x')">x</button>
+            <button class="button operator" onclick="appendToDisplay('%')">%</button>
+            <button class="button operator" onclick="appendToDisplay('+')">+</button>
+            <button class="button operator" onclick="appendToDisplay('-')">-</button>
+
+            <button class="button" onclick="appendToDisplay('7')">7</button>
+            <button class="button" onclick="appendToDisplay('8')">8</button>
+            <button class="button" onclick="appendToDisplay('9')">9</button>
+            <button class="button" onclick="appendToDisplay('.')">.</button>
+
+            <button class="button" onclick="appendToDisplay('4')">4</button>
+            <button class="button" onclick="appendToDisplay('5')">5</button>
+            <button class="button" onclick="appendToDisplay('6')">6</button>
+            <button class="button equals" onclick="calculateResult()">=</button>
+
+            <button class="button" onclick="appendToDisplay('1')">1</button>
+            <button class="button" onclick="appendToDisplay('2')">2</button>
+            <button class="button" onclick="appendToDisplay('3')">3</button>
+            <button class="button" onclick="appendToDisplay('0')">0</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
