@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios JavaScript (Prompt/Alert)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px; 
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.exercicios-grid {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    margin-top: 30px;
+}
+
+.exercicio-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 0; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px); 
+    min-width: 280px;
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+@media (max-width: 768px) {
+    .exercicio-card {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+}
+
+
+.exercicio-card h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-align: center;
+}
+.exercicio-card p {
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 0 auto;
+    width: fit-content; 
+}
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Lista de Exercícios - Lista 2</h1>
+        
+
+        <div class="exercicios-grid"> 
+            <div class="exercicio-card">
+                <h2>Exercício 1: Par, Ímpar ou Zero</h2>
+                <p>Verifique se um número digitado é par, ímpar ou zero.</p>
+                <button onclick="executarExercicio1()">Iniciar Exercício 1</button>
+            </div>
+
+            <div class="exercicio-card">
+                <h2>Exercício 2: Qual é o Maior Número</h2>
+                <p>Compare dois números digitados pelo usuário e diga qual deles é o maior.</p>
+                <button onclick="executarExercicio2()">Iniciar Exercício 2</button>
+            </div>
+
+            <div class="exercicio-card">
+                <h2>Exercício 3: Verificação de Fila Preferencial</h2>
+                <p>Descubra se você tem direito à fila preferencial com base em algumas perguntas.</p>
+                <button onclick="executarExercicio3()">Iniciar Exercício 3</button>
+            </div>
+
+            <div class="exercicio-card">
+                <h2>Exercício 4: Entrada na Festa por Idade</h2>
+                <p>Verifique se você pode entrar na festa e sob quais condições, de acordo com a sua idade.</p>
+                <button onclick="executarExercicio4()">Iniciar Exercício 4</button>
+            </div>
+
+            <div class="exercicio-card">
+                <h2>Exercício 5: Sistema de Login</h2>
+                <p>Tente fazer login com um nome de usuário e senha pré-definidos.</p>
+                <button onclick="executarExercicio5()">Iniciar Exercício 5</button>
+            </div>
+
+            <div class="exercicio-card">
+                <h2>Exercício 6: Quiz de Conhecimentos Gerais</h2>
+                <p>Teste seus conhecimentos com um pequeno quiz. Acerte tudo para vencer!</p>
+                <button onclick="executarExercicio6()">Iniciar Exercício 6</button>
+            </div>
+
+        </div> </div>
+
+    
+</body>
+
